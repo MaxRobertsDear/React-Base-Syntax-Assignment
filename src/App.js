@@ -20,6 +20,14 @@ class App extends Component {
       ]
     });
   }
+  usernameChangeHandler = (newUserName) => {
+    this.setState({
+      info: [
+        { username: newUserName.target.value, content: 'Time to rule the world' },
+        { username: 'Sarah', content: 'Should have known better' },
+      ]
+    });
+  }
 
   render() {
     const style = {
@@ -35,7 +43,7 @@ class App extends Component {
       <button 
         style={style}
         onClick={() => this.onClickHandler('YATSI!')} >Change Content</button>
-          <UserInput />
+          <UserInput changed={this.usernameChangeHandler} />
           <UserOutput username={this.state.info[0].username} content={this.state.info[0].content} />
           <UserOutput username={this.state.info[1].username} content={this.state.info[1].content} />
       </div>
