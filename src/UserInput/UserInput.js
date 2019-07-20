@@ -3,7 +3,7 @@ import React from 'react';
 const UserOutput = function() {
   return (
     <div>
-      I am user input
+      <input type='text' />
     </div>
   )
 }
