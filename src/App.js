@@ -36,7 +36,6 @@ class App extends Component {
       border: '1px solid blue', 
       padding: '8px', 
       cursor: 'pointer',
-      justifyContent: 'center'
     }
 
     return (
